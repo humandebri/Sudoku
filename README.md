@@ -115,10 +115,6 @@ The application is deployed on Vercel, offering:
 
 MIT
 
-### Author
-
-Your Name - [Your GitHub Profile](https://github.com/your-username)
-
 ---
 
 <a name="japanese"></a>
@@ -231,10 +227,6 @@ sudoku-app/
 ### ライセンス
 
 MIT
-
-### 作者
-
-あなたの名前 - [GitHubプロフィール](https://github.com/your-username)
 
 ---
 
