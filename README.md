@@ -2,7 +2,7 @@
 
 [English](#english) | [日本語](#japanese)
 
-![Sudoku App Screenshot](/api/placeholder/800/450)
+![Sudoku App Screenshot](https://github.com/humandebri/Sudoku/blob/main/Game_SS.png)
 
 <a name="english"></a>
 ## English
