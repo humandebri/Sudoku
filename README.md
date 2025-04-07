@@ -1,70 +1,241 @@
-# Getting Started with Create React App
+# Sudoku App | 数独アプリ
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[English](#english) | [日本語](#japanese)
 
-## Available Scripts
+![Sudoku App Screenshot](/api/placeholder/800/450)
 
-In the project directory, you can run:
+<a name="english"></a>
+## English
 
-### `npm start`
+A modern, interactive Sudoku game built with React and Tailwind CSS.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Live Demo:** [https://sudoku-two-mocha.vercel.app/](https://sudoku-two-mocha.vercel.app/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Features
 
-### `npm test`
+- **Multiple Difficulty Levels**: Choose between Easy, Medium, and Hard puzzles
+- **Dynamic Puzzle Generation**: Each game creates a unique, solvable Sudoku puzzle
+- **Intuitive Interface**: Clean design with number selector and cell highlighting
+- **Built-in Validation**: Automatic checking for puzzle completion
+- **Responsive Design**: Optimized for both desktop and mobile play
+- **Celebration Effect**: Displays a congratulatory message upon successful completion
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Technology Stack
 
-### `npm run build`
+- **React 19**: Utilizes the latest React features and hooks for efficient state management
+- **Tailwind CSS**: Custom styling with utility-first CSS framework
+- **JavaScript ES6+**: Modern JavaScript with advanced array manipulation and algorithms
+- **Backtracking Algorithm**: Implements a sophisticated algorithm for puzzle generation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Implementation Details
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Puzzle Generation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The application generates puzzles using a backtracking algorithm that:
+1. Creates a fully solved Sudoku board
+2. Strategically removes numbers based on the selected difficulty level
+3. Ensures the puzzle has a unique solution
 
-### `npm run eject`
+#### Game Logic
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Board State Management**: Tracks the state of each cell and distinguishes between initial (fixed) values and user inputs
+- **Cell Selection**: Implements an intuitive cell selection system with appropriate visual feedback
+- **Number Input**: Provides a clean popup interface for number selection
+- **Validation**: Continuously checks for rule violations and puzzle completion
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### UI/UX Considerations
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Visually distinguishes fixed cells from user-editable cells
+- Highlights the 3x3 grids for better visual organization
+- Provides immediate feedback on user actions
+- Implements subtle animations for better user experience
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Local Development
 
-## Learn More
+#### Prerequisites
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Node.js (v16+)
+- npm or yarn
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### Setup Instructions
 
-### Code Splitting
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/sudoku-app.git
+   cd sudoku-app
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-### Analyzing the Bundle Size
+3. Start the development server:
+   ```bash
+   npm start
+   # or
+   yarn start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-### Making a Progressive Web App
+### Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```
+sudoku-app/
+├── public/              # Static files
+├── src/                 # Source code
+│   ├── App.js           # Main application component
+│   ├── SudokuBoard.js   # Core game logic and UI
+│   ├── index.js         # Entry point
+│   └── ...              # Other React components and styles
+├── package.json         # Project dependencies and scripts
+└── tailwind.config.js   # Tailwind CSS configuration
+```
 
-### Advanced Configuration
+### Future Enhancements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Save game progress in local storage
+- Timer and score tracking
+- Dark mode support
+- More advanced difficulty levels
+- Hint system for players who get stuck
+- Share completed puzzles with friends
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+The application is deployed on Vercel, offering:
+- Continuous deployment from the main branch
+- Global CDN for fast loading
+- HTTPS by default
 
-### `npm run build` fails to minify
+### License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+MIT
+
+### Author
+
+Your Name - [Your GitHub Profile](https://github.com/your-username)
+
+---
+
+<a name="japanese"></a>
+## 日本語
+
+React と Tailwind CSS で構築された、モダンでインタラクティブな数独ゲームです。
+
+**ライブデモ:** [https://sudoku-two-mocha.vercel.app/](https://sudoku-two-mocha.vercel.app/)
+
+### 機能
+
+- **複数の難易度レベル**: 簡単、中級、難しいの3つの難易度から選択可能
+- **動的パズル生成**: 毎回ユニークで解答可能な数独パズルを生成
+- **直感的なインターフェース**: 数字選択とセル強調表示を備えたクリーンなデザイン
+- **バリデーション機能**: パズル完成の自動チェック
+- **レスポンシブデザイン**: デスクトップとモバイルの両方に最適化
+- **クリアエフェクト**: パズル完成時にお祝いメッセージを表示
+
+### 技術スタック
+
+- **React 19**: 最新のReact機能とフックを使用した効率的な状態管理
+- **Tailwind CSS**: ユーティリティファーストのCSSフレームワークによるカスタムスタイリング
+- **JavaScript ES6+**: 高度な配列操作とアルゴリズムを使用したモダンなJavaScript
+- **バックトラッキングアルゴリズム**: パズル生成のための洗練されたアルゴリズムを実装
+
+### 実装の詳細
+
+#### パズル生成
+
+アプリケーションはバックトラッキングアルゴリズムを使用してパズルを生成します:
+1. 完全に解かれた数独ボードを作成
+2. 選択された難易度レベルに基づいて戦略的に数字を削除
+3. パズルが一意の解答を持つことを保証
+
+#### ゲームロジック
+
+- **ボード状態管理**: 各セルの状態を追跡し、初期値（固定値）とユーザー入力を区別
+- **セル選択**: 適切なビジュアルフィードバックを備えた直感的なセル選択システム
+- **数字入力**: 数字選択のためのクリーンなポップアップインターフェース
+- **検証**: ルール違反とパズル完成を継続的にチェック
+
+#### UI/UX の考慮事項
+
+- 固定セルとユーザー編集可能セルを視覚的に区別
+- より良い視覚的構成のための3x3グリッドの強調表示
+- ユーザーアクションに対する即時フィードバック
+- より良いユーザー体験のための微妙なアニメーション
+
+### ローカル開発
+
+#### 前提条件
+
+- Node.js (v16+)
+- npm または yarn
+
+#### セットアップ手順
+
+1. リポジトリをクローン:
+   ```bash
+   git clone https://github.com/your-username/sudoku-app.git
+   cd sudoku-app
+   ```
+
+2. 依存関係をインストール:
+   ```bash
+   npm install
+   # または
+   yarn install
+   ```
+
+3. 開発サーバーを起動:
+   ```bash
+   npm start
+   # または
+   yarn start
+   ```
+
+4. ブラウザで [http://localhost:3000](http://localhost:3000) を開く
+
+### プロジェクト構造
+
+```
+sudoku-app/
+├── public/              # 静的ファイル
+├── src/                 # ソースコード
+│   ├── App.js           # メインアプリケーションコンポーネント
+│   ├── SudokuBoard.js   # コアゲームロジックとUI
+│   ├── index.js         # エントリーポイント
+│   └── ...              # その他のReactコンポーネントとスタイル
+├── package.json         # プロジェクトの依存関係とスクリプト
+└── tailwind.config.js   # Tailwind CSS設定
+```
+
+### 将来の拡張予定
+
+- ローカルストレージにゲームの進行状況を保存
+- タイマーとスコア追跡機能
+- ダークモードサポート
+- より高度な難易度レベル
+- 行き詰まったプレイヤー向けのヒントシステム
+- 完成したパズルを友達と共有する機能
+
+### デプロイメント
+
+アプリケーションはVercelにデプロイされ、以下を提供しています:
+- メインブランチからの継続的デプロイメント
+- 高速読み込みのためのグローバルCDN
+- デフォルトでのHTTPS
+
+### ライセンス
+
+MIT
+
+### 作者
+
+あなたの名前 - [GitHubプロフィール](https://github.com/your-username)
+
+---
+
+このプロジェクトは [Create React App](https://github.com/facebook/create-react-app) でブートストラップされました。
